@@ -21,7 +21,7 @@
                 <a href="mailto:nntc@mts-nn.ru">nntc@mts-nn.ru</a>
             </p>
         </div>
-        <div id="head-sigout">
+        <div onclick="signOut()" id="head-sigout">
             выйти
         </div>
     </div>
@@ -56,6 +56,8 @@
         return $outStr;
 
     }
+
+    echo $_COOKIE["id"];
 
 
     function addRobot($arr){

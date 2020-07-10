@@ -1,0 +1,92 @@
+
+*{
+    margin:  0;
+    padding: 0;
+}
+
+
+body{
+    background: lightblue;
+
+}
+
+.div_login, .div_reg{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -125px;
+    text-align: center;
+}
+
+.div_reg{
+    display: none;
+    height: 320px;
+    margin: -150px 0 0 -125px;
+
+}
+.title{
+    margin-bottom: 20px;
+}
+
+.div_btn{
+    position: absolute;
+    left:   50%;
+    top:    30px;
+    margin: 0 0 0 -150px;
+    width:  300px;
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 15px;
+    background-color: rgb(248, 248, 196);
+}
+
+
+.div_swap_in, .div_swap_up, .div_swap_select{
+    position: absolute;
+    height: 100%;    
+    text-align: center;
+    border-radius: 13px;
+    transition: 0.5s;
+    /* border: 2px solid black; */
+} 
+
+.div_swap_select{
+    background-color: blue;
+    opacity: 0.5;
+    width: 50%;
+    left: 0;
+}
+
+.div_swap_in{
+    left: 0;
+    right: 50%;
+    /* background-color: lightcoral; */
+}
+
+.div_swap_up{
+    left: 50%;
+    right: 0;
+    /* background-color: lightgreen; */
+}
+
+input{
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn{
+    border-color:lawngreen;
+    background:  lawngreen;
+    width: 80px;
+
+    transition: 0.4s;
+
+}
+.btn:hover{
+    width: 100px;
+}

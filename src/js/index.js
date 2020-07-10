@@ -41,4 +41,10 @@ function addRobot(id, photo, name, price){
     document.getElementById('site-body').append(main_div);
 }
 
+
+function signOut() {
+    location.href = "login.php";
+    
+}
+
 // addRobot(2, "../img/any.jpg", "name22", "price22");
