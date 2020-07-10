@@ -43,8 +43,8 @@ function addRobot(id, photo, name, price){
 
 
 function signOut() {
+    document.cookie = "id=-1";
     location.href = "login.php";
-    
 }
 
 // addRobot(2, "../img/any.jpg", "name22", "price22");

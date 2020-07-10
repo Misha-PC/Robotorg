@@ -21,3 +21,9 @@ function swap(){
     }
     state = !state;
 }
+
+
+
+function continue_() {
+    location.href = "index.php";
+}

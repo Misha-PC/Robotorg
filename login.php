@@ -15,7 +15,7 @@
             <input class="login"  type="text" name="login">
             <p>Password</p>
             <input class="pass" type="password" name="password">
-            <input class="btn" type="submit" value="SignIN">
+            <input class="btn" type="submit" value="SignIN" name="signin">
          </form>
     </div>
     
@@ -33,9 +33,9 @@
             <p>Confirm password</p>
             <input class="pass" type="password" name="c_password">
          
-            <p>Mail</p>
+            <!-- <p>Mail</p>
             <input class="pass" type="mail" name="mail">
-            
+             -->
             <input class="btn" type="submit" value="SignUP">
          </form>
     </div>
@@ -44,6 +44,10 @@
         <div class="div_swap_in"> signIn </div>
         <div class="div_swap_up"> signUp </div>
         <div class="div_swap_select" id="swap_selector"> </div>
+    </div>
+
+    <div class="btn_continue" onclick="continue_()">
+        continue without authorization
     </div>
 
     </body>
@@ -74,7 +78,7 @@ if (!$link) {
 
 
 
-if(!isset($login) ) {
+if(!isset($_POST["signIN"]) ) {
     $login = $_POST['login'];
     $pass =  $_POST['password'];
 

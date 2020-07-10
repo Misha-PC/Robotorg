@@ -22,7 +22,14 @@
             </p>
         </div>
         <div onclick="signOut()" id="head-sigout">
-            выйти
+        <?php
+            if($_COOKIE['id'] == -1){
+                echo "войти";
+            }
+            else{
+                echo "выйти";
+            }
+        ?>
         </div>
     </div>
 
@@ -41,9 +48,13 @@
 
 <?php
 
+/*
+ *
+ *    функция сборки массива в строку для отправки в JS скрипт
+ * 
+ */
 
-
-    function assemblyStr($arr){
+    function assemblyStr($arr){  
         $outStr = "'".
             $arr[0].
             "', '".
@@ -57,13 +68,22 @@
 
     }
 
-    echo $_COOKIE["id"];
+/*
+ *
+ *   фунцкция превращения массива в объект на странице
+ *   
+ */
 
-
-    function addRobot($arr){
+    function addRobot($arr){ 
         $str = assemblyStr($arr);
         echo "<script lang='js'> addRobot($str); </script>";    
     }
+
+/*
+ *
+ * запрос двумерного массива из БД 
+ * 
+ */
 
 
     function getRobotArray(){
@@ -94,7 +114,11 @@
         return $outArray;
 
     }
-
+/*
+ *
+ * генерация страницы объединяющая выше представленные функции
+ *
+ */
 
     function assemblyPage()    {
         $inputArray = getRobotArray();
@@ -105,8 +129,7 @@
     }
 
 
-    assemblyPage();
+    assemblyPage(); //вызов функции генерации страницы
   
-    // getRobotArray();
 
 ?>
