@@ -84,8 +84,6 @@
  * запрос двумерного массива из БД 
  * 
  */
-
-
     function getRobotArray(){
         $servername = "localhost";
         $username   = "robotorg";
